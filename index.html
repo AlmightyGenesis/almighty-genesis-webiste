@@ -1,306 +1,1058 @@
 <!DOCTYPE html>
-<html lang = "en">
-<head>
-<meta charset = "UTF-8">
-<meta name = "viewport"
-content = "width = device-width, initial-scale = 1.0">
-<title> JOB HIRING POST </title>
-<style>
-body {
-     margin : 0;
-     padding : 0;
-     background-image : url("img.jpeg");
-     background-size : cover;
-     background-position : center;
-     background-repeat : no-repeat;
-     display : flex;
-     justify-content : center;
-     align-items : center;
-     height : 100vh;
-     font-family : 'segoe UI', sans-serif;
-     }   
-     .post {
-           width : 1080px;
-           height : 1080px;
-           background : linear-gradient;
-           color : white;
-           padding : 80px;
-           box-sizing : border-box;
-           display : flex;
-           flex-direction : column;
-           justify-content : center;
-           position : relative;
-           z-index : 2;
-           }
-      .company {
-            font-size : 40px; 
-            font-weight : boldserif;
-            letter-spacing : 2px;
-            margin-bottom : 40px;
-            font-family : stencil;
-            }
-       .hiring {
-            font-size : 30px;
-            font-weight : bold;
-            color : white;
-            }
-       .position {
-           font-size : 30px;
-           color : DarkTurquoise;
-           font-weight : bold;
-           }
-       .details {
-           font-size : 25px;
-           line-height : 1.8;
-           color : white;																	
-          }
-       .button  {
-           background-color : black;
-           color : light pink;
-           font-size : 25px;
-           font-weight : bold;
-           padding : 15px 30px;
-           width : fit-content;
-           border-radius : 40px;
-           cursor : pointer;
-        
-          }
-        .background {
-           background-image = url("img.jpeg");
-         }
-   </style>
-   </head>
-   
-<body>
-         <div id="3Dparticles-js"></div>
-         <div class="wave"></div>
-         <div class="wave wave2"></div>
-         <div class="wave wave3"></div>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>ALMIGHTY GENESIS COMPANY</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
 
-         <div class = "post">
-         <div class = "company" align = "center" >
-         <img src="logo.png" alt="Almighty Genesis Logo" style="width:150px; display:flex; margin:0 auto 10px;">
-         <span style="color:#007BFF;">ALMIGHTY</span>
-         <span style="color:#C2188F;"> GENESIS</span>
-         </div>
-         <h2><div class = "position"> BE PART OF ALMIGHTY GENESIS </div></h2>
-         <h2><div class = "Hiring"> WE ARE HIRING </div></h2>
-        <div class = "details" >
-         Location : KAKINADA <br>
-         Experience : 0-2 years <br>
-         Qualification : Any Degree <br>
-         Requirements : Interested in Marketing and Sales
-                        & Business Opportunities <br>
-         Send Resume : almightygenesis@gmail.com
-</div>
+        <div class="particles"></div>
 
-<div class="button" onclick="openForm()"> Apply Now </div>
-<div class="form-container" id="jobForm">
-<div class="form-box">
-<span class="close-btn"
-onclick="closeForm()">X</span>
-<h2>Job Application</h2>
-<h3 style="text-align:center;color:#333; margin-bottom:15px;">Candidates Details</h3>
+    <!--NAVBAR-->
 
-  <form id="jobApplicationForm" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="jobApplicationForm">
-    <input type="text" name="fullname" placeholder="Name of the Candidate" required>
-    <input type="Email" name="Email" placeholder="Email Id" required> 
+<nav id="navbar">
+
+    <!-- COMPANY LOGO -->
+    <div class="company">
+
+        <img src="logo.png" class="logo-img" alt="Almighty Genesis" style="width:150px; display: flex; margin: 0 auto 10px;">
+
+        <span class="Company-name"></span>
+        <span style="color:#007BFF;">ALMIGHTY</span>
+        <span style="color:#C2188F;">GENESIS</span>
+
+    </div>
+
+    <!-- MENU -->
+
+    <ul class="menu">
+
+        <!-- HOME -->
+
+        <li onclick="showSection('home')">Home</li>
+
+
+        <!-- ABOUT US -->
+
+        <li class="dropdown">
+
+
+            About Us
+
+            <ul class="dropdown-content">
+
+                <li onclick="openPage('overview')">
+                    Company Overview
+                </li>
+
+                <li class="submenu">
+
+                    Mission & Vision > 
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('mission')">
+                            Our Mission
+                        </li>
+
+                        <li onclick="openPage('vision')">
+                            Our Vision
+                        </li>
+
+                        <li onclick="openPage('future')">
+                            Future Goals
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li onclick="openPage('why')">
+                    Why Choose Us
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- SERVICES -->
+
+        <li class="dropdown">
+
+            Services
+
+            <ul class="dropdown-content">
+
+                <!-- WEB DEVELOPMENT -->
+
+                <li class="submenu">
+
+                    Web Development 
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('frontend')">
+                            Full-stack Development
+                        </li>
+
+                        <li onclick="openPage('backend')">
+                            Front-End Development
+                        </li>
+
+                        <li onclick="openPage('fullstack')">
+                            Back-End Development
+                        </li>
     
-<div style="display:flex; gap:10px; align-items:center;">
-<select name="countryCode" required>
-<option value="+91">+91</option>
-<option value="+1"> +1</option>
-<option value="+44">+44</option>
-</select>
- <input type="tel" name="Mobile" id="Mobile" placeholder="Mobile" required maxlength="10" pattern="[0-9]{10}" title="please enter exactly 10 digits">
-</div>
-          <label style="color:black;">Position<span style="color:red">*</span></label>
-          <select name="position" required>
-            <option value= "" disabled selected>Select Position</option> 
-            <option value="business_development_executive">BUSINESS DEVELOPMENT EXECUTIVE</option>
-            <option value="sales_executive">SALES EXECUTIVE</option>
-            <option value="marketing_executive">MARKETING EXECUTIVE</option>
-            <option value="customer_support_representive">CUSTOMER SUPPORT REPRESENTATIVE </option>
-            <option value="marketing_manager">MARKETING MANAGER</option>
-</select>
+                        <li onclick="openPage('database')">
+                            DataBase
+                        </li>
+
+                        <li onclick="openPage('ecommerce')">
+                            E-Commerce Websites
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- SOFTWARE -->
+
+                <li class="submenu">
+
+                    Software Development >
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('erp')">
+                            ERP Solutions
+                        </li>
+
+                        <li onclick="openPage('crm')">
+                            CRM Software
+                        </li>
+
+                        <li onclick="openPage('ai')">
+                            AI Solutions
+                        </li>
+
+                    </ul>
+
+                </li>
+
+
+                <!-- DIGITAL MARKETING -->
+
+                <li class="submenu">
+
+                    Digital Marketing >
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('seo')">
+                            SEO
+                        </li>
+
+                        <li onclick="openPage('social')">
+                            Social Media Marketing
+                        </li>
+
+                        <li onclick="openPage('branding')">
+                            Branding
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li onclick="openPage('hosting')">
+                    Hosting Services
+                </li>
+
+                <li onclick="openPage('insurance')">
+                    Insurance Services
+                </li>
+
+                <li onclick="openPage('loans')">
+                    Loan Assistance
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- BUSINESS MODEL -->
+
+        <li class="dropdown">
+
+            Business Model
+
+            <ul class="dropdown-content">
+
+                <li class="submenu">
+
+                    Franchise Model >
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('benefits')">
+                            Franchise Benefits
+                        </li>
+
+                        <li onclick="openPage('fees')">
+                            Fee Structure
+                        </li>
+
+                        <li onclick="openPage('setup')">
+                            Business Setup
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="submenu">
+
+                    Partnership Program >
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('startup')">
+                            Startup Partnership
+                        </li>
+
+                        <li onclick="openPage('business')">
+                            Business Collaboration
+                        </li>
+
+                        <li onclick="openPage('investor')">
+                            Investor Connect
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li onclick="openPage('revenue')">
+                    Revenue Structure
+                </li>
+
+                <li onclick="openPage('training')">
+                    Training & Support
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- BUSINESS OPPORTUNITIES -->
+
+        <li class="dropdown">
+
+            Business Opportunities
+
+            <ul class="dropdown-content">
+
+                <li onclick="openPage('work')">
+                    Work With Us
+                </li>
+
+                <li class="submenu">
+
+                    Startup Collaboration >
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('funding')">
+                            Funding Guidance
+                        </li>
+
+                        <li onclick="openPage('strategy')">
+                            Business Strategy
+                        </li>
+
+                        <li onclick="openPage('support')">
+                            Technology Support
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li class="submenu">
+
+                    Business to Business Services >
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('corporate')">
+                            Corporate Solutions
+                        </li>
+
+                        <li onclick="openPage('enterprise')">
+                            Enterprise Services
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li onclick="openPage('affiliate')">
+                    Affiliate Program
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- CAREERS -->
+
+        <li class="dropdown"
+          onclick="openPage('careermain')">
+
+            Careers
+
+            <ul class="dropdown-content">
+
+                <li onclick="openPage('wfh')">
+                    Work From Home
+                </li>
+
+                <li onclick="openPage('office')">
+                    Work In Office
+                </li>
+
+                <li class="submenu">
+
+                    Internship Program >
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('webintern')">
+                            Web Internship
+                        </li>
+
+                        <li onclick="openPage('marketingintern')">
+                            Marketing Internship
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li onclick="openPage('jobs')">
+                    Current Openings
+                </li>
+
+                <li onclick="openPage('apply')">
+                    Apply For Job
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- INSIGHTS -->
+
+        <li class="dropdown">
+
+            Insights
+
+            <ul class="dropdown-content">
+
+                <li onclick="openPage('updates')">
+                    Latest Updates
+                </li>
+
+                <li class="submenu">
+
+                    Technology News >
+
+                    <ul class="submenu-content">
+
+                        <li onclick="openPage('ainews')">
+                            AI News
+                        </li>
+
+                        <li onclick="openPage('softwaretrends')">
+                            Software Trends
+                        </li>
+
+                    </ul>
+
+                </li>
+
+                <li onclick="openPage('stories')">
+                    Success Stories
+                </li>
+
+            </ul>
+
+        </li>
+
+
+        <!-- CONTACT -->
+
+        <li class="dropdown">
+
+            Contact
+
+            <ul class="dropdown-content">
+
+                <li onclick="openPage('contact')">
+                    Contact Us
+                </li>
+
+                <li onclick="openPage('supportteam')">
+                    Support Team
+                </li>
+
+                <li onclick="openPage('location')">
+                    Office Location
+                </li>
+
+                <li onclick="openPage('enquiry')">
+                    Enquiry Form
+                </li>
+
+            </ul>
+
+        </li>
+
+    </ul>
+
+</nav>
+
+    <!--HERO-->
+    <section id="home" class="active hero">
+
+        <!--BACKGROUND VIDEO-->
+        <video autoplay muted loop playsinline class="bg-video">
+            <source src="background.mp4" type="video/mp4">
+        </video>
+
+        <!--DARK OVERLAY-->
+        <div class="overlay"></div>
+
+        <!--HERO CONTENT-->
+      <div class="hero-content">
+        
+            <h1>WELCOME TO ALMIGHTY GENESIS</h1>
+        
+         <h2> Make Impossible, Possible</h2>
+         <h3> Empowering Entrepreneurs through Innovation & Opportunity </h3>
+        
+        <button class="explore-btn">
+            Explore
+        </button>
+     </div>
+    </section>
+
+    <!--HOME GLASS CONTENT SECTION-->
+     <!--HOME SECTION 1-->
+        <div class="home-details">
+
+            <!--LEFT VIDEO-->
+            <div class="home-video">
+                <video autoplay muted loop playsinline>
+                    <source src="business1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+             <!--RIGHT TEXT-->
+            <div class="home-text">
+                <h2>ALMIGHTY GENESIS</h2>
+                <P>
+                    We are a fast-growing business solutions company offering franchise opportunities and professional services across financial and digital sectors. Our goal is to help individuals become successful entrepreneurs by providing profitable business models, training, technology support, and trusted partnerships.
+                 We work with reputed brokerage firms and software companies to deliver reliable and high-quality services to our customers and partners.
+                 Whether you are a student, employee, business owner, or investor, our platform helps you create your own income source and establish a long-term business.
+                </P>
+            </div>
+        </div>
+
+        <!--HOME SECTION 2-->
+        <div class="home-details">
+
+            <!--RIGHT TEXT-->
+            <div class="home-text">
+                <h2>BUSINESS GROWTH SOLUTIONS</h2>
+
+                <p>
+                    Our organization works as an active service intermediary between financial institutions and customers by identifying customer requirements, generating quality leads, and supporting service accessibility through modern digital strategiess.
+                    With the power of digital marketing, technology, and a scalable franchise model, we enable individuals and entrepreneurs to participate in the growing financial services ecosystem without requiring heavy infrastructure or large investments.
+                </p>
+            </div>
+
+            <!--RIGHT VIDEO-->
+            <div class="home-video">
+                <video autoplay muted loop playsinline>
+                    <source src="business2.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+
+      <!--HOME SECTION 3-->
+      <div class="home-details">
+
+        <!--LEFT VIDEO-->
+
+        <div class="home-video">
+            <video autoplay muted loop playsinline>
+                <source src="business3.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!--RIGHT TEXT-->
+        <div class="home-text">
+            <h2>FUTURE TECHNOLOGY</h2>
+            <P>
+                In today’s fast-changing world, technology is transforming how businesses operate, connect with customers, and grow globally. Future-focused companies are adopting advanced technologies to improve efficiency, increase productivity, and create smarter business solutions. Business development is no longer limited to traditional strategies — it now depends on innovation, digital transformation, and intelligent systems.
+            </P>
+        </div>
+      </div>
+
+      <!--HOME SECTION 4-->
+      <div class="home-details">
+
+        <!--LEFT TEXT-->
+        <div class="home-text">
+            <h2>STARTUP SUPPORT</h2>
+            <P>
+                Startups are the driving force behind innovation, economic growth, and technological advancement. In today’s competitive business environment, startups need more than just an idea — they need the right support system to transform vision into success. Our startup support services are designed to help emerging businesses grow faster, operate smarter, and achieve sustainable success.
+            </P>
+        </div>
+          
+        <!--RIGHT VIDEO-->
+        <div class="home-video">
+            <video autoplay muted loop playsinline>
+                <source src="business4.mp4" type="video/mp4">
+            </video>
+        </div>
+      </div>
+
+      <div class="home-heading">
+       <h3> Shaping the Future</h3>
+       <h1> "Welcome to the World of Opportunities".
+        </h1>
+
+           <p>
+             Training is step one. <br>
+             Placement is the goal. <br>
+             Our Programs are designed backwards from what companies actually hire for.<br>
+             "Success = Your Job, Not just your certificate".
+           </p> 
+      </div>
+
+      <div class="home-heading">
+        <h1> Portfolio</h1>
+        <p>
+            Our portfolio demonstrates how we use technology to solve real business problems. Each project reflects our ability to design, build, and scale digital solutions that drive measurable impact.
+        </p>
+      </div>
+
+    <!--IMAGES SECTION-->
+    <div class="portfolio-images">
+        <img src="image1.jpg" alt="">
+        <img src="image2.jpg" alt="">
+        <img src="image3.jpg" alt="">
+        <img src="image4.jpg" alt="">
+    </div>  
+
+    <!--OUR INSIGHTS-->
+    <div class="home-heading">
+        <h1> Our Insights</h1>
+        <p> 
+            Markets, technology, and talent don't stand still. We track shifts early, separate signal from noise, and turn data into decisions. Our insights come doing the work — not just watching it.
+        </p>
+    </div>
+
+    <!--BOOK APPOINTMENT BUTTON-->
+    <div class="appointment-btn">
+        <button> BOOK APPOINTMENT</button>
+    </div>
+
+
+
+    <!--ABOUT-->
+    <section id="aboutMenu" class="panel">
+        <ul>
+            <li onclick="openPage('overview')">. Company Overview</li>
+            <li onclick="openPage('mission')">. Our Mission</li>
+            <li onclick="openPage('services')">. Our Services</li>
+            <li onclick="openPage('values')">. values</li>
+            <li onclick="openPage('leadership')">. Leadership</li>
+        </ul>
+    </section>
+
+    <!--SERVICES-->
+    <section id="servicesMenu" class="panel">
+        <ul>
+            <li onclick="openPage('web')">. Web Development</li>
+            <li onclick="openPage('hosting')">. Web Hosting</li>
+            <li onclick="openPage('software')">. Software Development</li>
+            <li onclick="openPage('insurance')">. Insurance</li>
+            <li onclick="openPage('loans')">. Loans</li>
+        </ul>
+    </section>
+
+    <!--BUSINESS MODEL-->
+    <section id="businessMenu" class="panel">
+        <ul>
+            <li onclick="showMenu('franchiseMenu')">. Franchise</li>
+            <li onclick="showMenu('opportunitySubMenu')">. Business Opportunity</li>
+        </ul>
+    </section>
+
+    <!--FRANCHISE-->
+    <section id="franchiseMenu" class="panel">
+        <ul>
+            <li onclick="openPage('brand')">. Brand Overview</li>
+            <li onclick="openPage('why')">. Why Choose</li>
+            <li onclick="openPage('fee')">. Fee Structure</li>
+            <li onclick="openPage('training')">. Training & Support</li>
+            <li onclick="openPage('marketing')">. Marketing Assistance</li>
+        </ul>
+    </section>
+
+    <!--BUSINESS OPPORTUNITIES-->
+    <section id="opportunitySubMenu" class="panel">
+        <ul>
+            <li onclick="openPage('partnership')">. Partnership</li>
+            <li onclick="openPage('work')">. Work With Us</li>
+            <li onclick="openPage('startup')">. StartUp Collaboration</li>
+            <li onclick="openPage('b2b')">. B2B Services</li>
+        </ul>
+    </section>
+
+    <!--CAREERS-->
+    <section id="careersMenu" class="panel">
+        <ul>
+            <li onclick="openPage('wfh')">Work From Home</li>
+            <li onclick="openPage('wio')">. Work In Office</li>
+            <li onclick="openPage('apply')">. Apply For Job</li>
+            <li onclick="openPage('contact')">. Contact</li>
+        </ul>
+    </section>
+
+    <!--CONTENT PAGE-->
+    <section id="contentPage" class="content-page">
+
+        <!--VIDEO HERO SECTION-->
+        <div class="content-hero">
+
+      <!--COMPANY OVERVIEW-->
+      <video autoplay muted loop playsinline class="content-video" id="contentVideo">
+        <source id="videoSource" src="" type="video/mp4">
+      </video>
+      <!--DARK OVERLAY-->
+      <div class="overlay"></div>
+
+    <!--HERO TEXT-->
+    <div class="content-hero-text">
+      <h1 id="pageTitle"></h1>
+      <p id="pageQuestion"></p>
+    </div>
+    </div>
+
+    <div class="content-details">
+      <div class="content-text">
+        <h2 id="detailTitle"></h2>
+       <p id="detailText"></p> 
+       </div>
+    </div>
       
-      <div class="resume-box">
- <label class="resume-label">Resume<span style="color:red">*</span></label>
-<div class="upload-box">
- <p class="upload-text">Upload 1 supported file. max 2MB.</p>
-     
-    <label class="upload-btn">
-      <input type="file" name="resume" accept=".pdf" required hidden>
-        Add file
-</label>
-<span id="fileName"></span>
+        <div class="process-section" id="overviewProcess">
 
-  <button type="submit" class="submit-btn">Submit Application</button>
-</form>
+            <div class="process-heading">
+                <h1> OUR PROCESS </h1>
+            </div>
+
+            <div class="process-container">
+
+                <!--BOX1-->
+                <div class="process-box">
+                    <h2>OUTCOME DRIVEN</h2>
+                    <p>
+                        Success = Your Job, not just your certificate.
+                    </p>
+                </div>
+
+                <!--BOX2-->
+                <div class="process-box">
+                    <h2>HIRING NETWORK</h2>
+                    <p>
+                        Active tie-ups across IT, BFSI, Healthcare, <br>
+                        E-commerce, and more.
+                    </p>
+                </div>
+
+                <!--BOX3-->
+                <div class="process-box">
+                    <h2> FLEXIBLE LEARNING</h2>
+                    <p>
+                        Classroom, oonline live, hybrid - with EMI and pay-after-placement options.
+                    </p>
+                </div>
+
+                <!--BOX4-->
+                <div class="process-box">
+                    <h2> TRACK RECORD</h2>
+                    <p>
+                        10,000+ Careers launched. 85% placement rate in last 12 months.
+                    </p>
+                </div>
+
+                <!--BOX5-->
+                <div class="process-box">
+                    <h2> 
+                        JOURNEY WITH US
+                     </h2>
+                    <p>
+                        Whether you're a student ready to start, a proffessional looking to switch, or a company seeking trained talent - we're here to make it happen.
+                    </p>
+                </div>
+
+                <!--BOX6-->
+                <div class="process-box">
+                    <h2>DOMINATE/DELIVER</h2>
+                    <p>
+                        Focus on scaling the solution, measuring results, achieving desired outcomes, and driving continuos improvement.
+                    </p>
+                </div>
+           </div>
+        </div>
+
+        <div class="what-section" id="overviewWhat">
+
+            <div class="what-heading">
+                <h1> WHAT WE DO </h1>
+            </div>
+
+            <div class="what-container">
+
+                <!--BOX1-->
+                <div class="what-box">
+                    <h2> INDUSTRY-ALIGNED TRAINING</h2>
+                    <p>
+                        Tech, non-tech, and soft skills programs designed with hiring partners Hands-On.
+                    </p>
+                </div>
+
+                <!--BOX2-->
+                <div class="what-box">
+                    <h2>LEARNING</h2>
+                    <p>
+                        Live projects, case studies, and tools used in real companies.
+                    </p>
+                </div>
+
+                <!--BOX3-->
+                <div class="what-box">
+                    <h2> CAREER SUPPORT</h2>
+                    <p>
+                        Resume building, mock interviews, communication caoching placement.
+                    </p>
+                </div>
+
+                <!--BOX4-->
+                <div class="what-box">
+                    <h2> Corporate Upskilling</h2>
+                    <p>
+                        Custom bootcamps to make teams job-ready from day one.
+                    </p>
+                </div>
+
+                <!--BOX4-->
+                <div class="what-box">
+                    <h2> How It Work's...?</h2>
+                    <p>
+                        Join as a business partner today, attend for knowledge based training programme and learn business models.
+                    </p>
+                </div>
+
+           </div>
+        </div>
+
+        <!-- MISSION BOXES -->
+
+<div class="mission-section" id="missionBoxes">
+
+    <div class="mission-container">
+
+        <!-- BOX 1 -->
+
+        <div class="mission-box">
+
+            <h2>Innovation</h2>
+
+            <p>
+                We focus on innovative ideas and modern solutions to build strong businesses.
+            </p>
+
+        </div>
+
+        <!-- BOX 2 -->
+
+        <div class="mission-box">
+
+            <h2>Leadership</h2>
+
+            <p>
+                Our mission is to create confident leaders with entrepreneurial thinking.
+            </p>
+
+        </div>
+
+        <!-- BOX 3 -->
+
+        <div class="mission-box">
+
+            <h2>Success</h2>
+
+            <p>
+                We help individuals achieve financial growth and long-term success.
+            </p>
+
+        </div>
+
+    </div>
+
+  <div class="misssion-image" alt="misssion-image">
+      <img src="misssion.png">
+    </div>
+
 </div>
+
+<div class="mission-flow-section" id="missionFlow">
+
+    <div class="mission-flow-heading">
+        <h1>OUR MISSION PROCESS</h1>
+    </div>    
+
+    <div class="mission-container">
+
+        <div class="flow-box">
+            <h3>IDEA</h3>
+            <p>Innovative business ideas and smart planning for future growth.</p>
+        </div>
+
+        <div class="flow-arrow">➥</div>
+
+        <div class="flow-box">
+            <h3>DEVELOP</h3>
+            <p>Creating powerful digital and financial solutions with technology.</p>
+        </div>
+
+        <div class="flow-arrow">➥</div>
+
+        <div class="flow-box">
+            <h3>SUPPORT</h3>
+            <p>Providing guidance, training, and professional business support.</p>
+        </div>
+
+        <div class="flow-arrow">➥</div>
+
+        <div class="flow-box">
+            <h3>SUCCESS</h3>
+            <p>Helping entrepreneurs achieve <br>
+                long-term business success.</p>
+        </div>
+
+        <div class="flow-arrow">➥</div>
+
+        <div class="flow-box">
+            <h3> INNOVATION </h3>
+            <P> Driving smart solutions that help businesses grow and adapt to chnaging markets. </P>
+        </div>
+
+        <div class="flow-arrow">➥</div>
+
+        <div class="flow-box">
+            <h3> FOUNDATION OF SUCCESS</h3>
+            <P>
+                Enabling growth through integrity, innovation, and strategic execution.
+            </P>
+        </div>
+
+    </div>
+
 </div>
 
-<style>
-.form-container {
- display : none;
- position : fixed;
- top : 0;
- left : 0;
- width : 100%;
- height : 100%;
- background : rgba(0,0,0,0.6);
- justify-content : center;
-align-items : center;
-z-index : 999;
-}
-.form-box {
-  background : #fff;
-  padding : 25px;
-  width : 350px;
-  border-radius : 10px;
-  position : relative;
-}
-.form-box input,
-.form-box select {
-  width : 100%;
-  padding : 8px;
-  margin : 8px 0;
-}
-.form-box label {
-   font-size:18px;
-   color:black;
-   margin-top:10px;
-   display:block;
-  }
-.required {
-  color:black;
-  margin-left:3px;
-}
-.resume-box {
-  margin-top:10px;
-}
-.resume-label {
-  font-size:16px;
-  color:black;
-  display:block;
-  margin-bottom:8px;
- }
-.upload-box {
-  padding:15px;
-  border-radius:9px;
-  background:#fafafa;
- }
-.upload-text {
-  font-size:13px;
-  color:black;
-  margin-bottom:10px;
- }
-.upload-btn {
-   display:inline-block;
-   padding:10px 15px;
-   cursor:pointer;
-   background:white;
-  }
-.upload-btn:hover {
-   background:#f0f0f0;
-  }
-.submit-btn {
-  width : 100%;
-  padding : 10px;
-  background : #0b2c3d;
-  color : white;
-  border : none;
-  cursor : pointer;
-}
-.close-btn {
-  position : absolute;
-  right : 10px;
-  top : 10px;
-  cursor : pointer;
-  }
-.wave {
- position : fixed;
- bottom : 0;
- left : 0;
- width : 200%;
- height : 200%;
- background : rgba(255,255,255,0.3);
- opacity : 0.4;
- border-radius : 43%;
- animation : waveMove 10s linear infinite;
- }
-.wave2 {
- bottom : 20px;
- opacity : 0.15;
- animation : waveMove 15s linear infinite;
- }
-.wave3 {
- bottom : 40px;
- opacity : 0.15;
- animation : waveMove 20s linear infinite;
-}
-@keyframes waveMove {
-0% {
-transform : translateX()rotate(0deg);
-}
-100% {
-transform : translateX(-50%)rotate(360deg);
-}
-}
-@media (max-width:480px) {
-body {
-    height : auto;
-    padding : 20px 10px;
-   }
-.post {
-   width : 100%;
-   height : auto;
-   padding : 40px;
-  }
-.company img {
-  width : 100px;
- }
-.company {
-  font-size : 22px;
- }
-.position {
-  font-size : 18px;
- }
-.hiring {
-  font-size : 18px;
- }
-.details {
-  font-size : 14px;
-  line-height : 1.5;
- }
-.button {
-  font-size : 16px;
-  padding : 10px 20px;
- }
-}
-</style>
+<!-- VISION SECTION -->
 
-<script>
-function openForm() {
-  document.getElementById("jobForm").style.display="flex";
-}
-function closeForm() {
-  document.getElementById("jobForm").style.display="none";
-}
-document.getElementById("jobApplicationForm").addEventListener("submit",function(){
-alert("Your Application Was Successfully Completed");
-});
-const resumeInput=document.querySelector('input[name="resume"]');
-const fileNameSpan=document.getElementById('fileName');
-resumeInput.addEventListener('change',function() {
-    if(this.files.length>0) {
-fileNameSpan.textContent="Selectedfile:"+this.files[0].name;
-fileNameSpan.style.color="blue";
-} else {
-fileNameSpan.textContent="";
-}
-});
-</script>
-</head>
+<div class="vision-section" id="visionSection">
+
+    
+
+    <!-- RIGHT CONTENT -->
+
+    <div class="vision-content">
+
+        <h1>OUR VISION</h1>
+
+        <p>
+            Our vision is to empower individuals and businesses through innovation,
+            leadership, technology, and smart opportunities. We aim to create
+            future-ready entrepreneurs with confidence, creativity, and strong
+            professional growth.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<div class="vision-flow-section" id="visionFlow">
+
+    <div class="vision-flow-heading">
+        <h1>THE CREATIVE PROCESS</h1>
+    </div>
+
+    <div class="vision-box-flow">
+
+        <div class="vision-step-box">
+            <h2>STEP 1</h2>
+            <h3>DEFINE</h3>
+            <p>Understand the business goals.</p>
+        </div>
+
+        <div class="vision-arrow">➜</div>
+
+        <div class="vision-step-box">
+            <h2>STEP 2</h2>
+            <h3>COLLECT</h3>
+            <p>Gather information and ideas.</p>
+        </div>
+
+        <div class="vision-arrow">➜</div>
+
+        <div class="vision-step-box">
+            <h2>STEP 3</h2>
+            <h3>ANALYZE</h3>
+            <p>Create smart business strategies.</p>
+        </div>
+
+        <div class="vision-arrow">➜</div>
+
+        <div class="vision-step-box">
+            <h2>STEP 4</h2>
+            <h3>DEVELOP</h3>
+            <p>Build innovative digital solutions.</p>
+        </div>
+
+        <div class="vision-arrow">➜</div>
+
+        <div class="vision-step-box">
+            <h2>STEP 5</h2>
+            <h3>PRESENT</h3>
+            <p>Deliver professional solutions.</p>
+        </div>
+
+        <div class="vision-arrow">➜</div>
+
+        <div class="vision-step-box">
+            <h2>STEP 6</h2>
+            <h3>IMPROVE</h3>
+            <p>Continuously improve and grow.</p>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+    <script src="script.js"></script>
+
+    <!-- FOOTER SECTION-->
+
+    <footer class="footer">
+
+        <!--COMPANY LOGO-->
+
+        <div class="footer-logo">
+            
+            <img src="logo.png" alt="Company Logo" alt="Almighty Genesis" style="width:150px; display: flex; margin: 0 auto 10px;">
+            <h2>
+            <span class="almighty" style="color:#007BFF;">ALMIGHTY</span>
+            <span class="genesis" style="color:#C2188F;">GENESIS</span>
+            </h2>
+
+            <p>
+                MAKE IMPOSSIBLE, POSSIBLE...!
+            </p>
+        </div>
+
+        <!--QUICK LINKS-->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Careers</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!--ADDRESS-->
+        <div class="footer-address">
+            <h3>Office Address</h3>
+            <p>
+                Almighty Genesis Pvt Ltd <br>
+                KAKINADA, ANDHRAPRADESH <br>
+                HYDERABAD, TELANGANA <br>
+                Andhra Pradesh, India
+            </p>
+
+            <p>
+                Email: info@almightygenesis.com
+            </p>
+
+            <p>
+                phone: +91 9999999999;
+            </p>
+        </div>
+
+        <!--SOCIAL MEDIA-->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#"><i class="fabfa-instagram"></i></a>
+                <a href="#"><i class="fabfa-facebook"></i></a>
+                <a href="#"><i class="fabfa-linkedin"></i></a>
+                <a href="#"><i class="fabfa-twitter"></i></a>
+            </div>
+        </div>
+    </footer> 
+
+  
+   </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
