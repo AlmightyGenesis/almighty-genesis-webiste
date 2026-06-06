@@ -5,6 +5,7 @@
         <title>ALMIGHTY GENESIS COMPANY</title>
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     </head>
     <body>
 
@@ -48,7 +49,7 @@
 
                         <li class="submenu">
 
-                            Mission & Vision > 
+                            Our Aspiration
 
                             <ul class="submenu-content">
 
@@ -58,10 +59,6 @@
 
                                 <li onclick="openPage('vision')">
                                     Our Vision
-                                </li>
-
-                                <li onclick="openPage('future')">
-                                   Future Goals
                                 </li>
 
                             </ul>
@@ -87,89 +84,36 @@
 
                         <!-- WEB DEVELOPMENT -->
 
-                        <li class="submenu">
-
-                            Web Development 
-
-                            <ul class="submenu-content">
-
-                               <li onclick="openPage('fullstack')">
-                                   Full-stack Development
-                                </li>
-
-                                <li onclick="openPage('Front-End')">
-                                   Front-End Development
-                                </li>
-
-                                <li onclick="openPage('Back-End')">
-                                   Back-End Development
-                                </li>
-    
-                                <li onclick="openPage('database')">
-                                    DataBase
-                                </li>
-
-                                <li onclick="openPage('ecommerce')">
-                                    E-Commerce Websites
-                                </li>
-
-                            </ul>
-
+                        <li onclick="openPage('lead')">
+                            Lead Generation and Sales Support
                         </li>
 
-
-                        <!-- SOFTWARE -->
-
-                        <li class="submenu">
-
-                            Software Development 
-
-                            <ul class="submenu-content">
-
-                                <li onclick="openPage('erp')">
-                                   ERP Solutions
-                                </li>
-
-                                <li onclick="openPage('crm')">
-                                    CRM Software
-                                </li>
-
-                                <li onclick="openPage('ai')">
-                                    AI Solutions
-                                </li>
-
-                            </ul>
-
+                        <li onclick="openPage('hr')">
+                             Hr & Recruitment Process OutSourcing
                         </li>
 
-
-                        <!-- DIGITAL MARKETING -->
-
-                        <li class="submenu">
-
-                            Digital Marketing 
-
-                            <ul class="submenu-content">
-
-                                <li onclick="openPage('seo')">
-                                  SEO
-                                </li>
-
-                                <li onclick="openPage('social')">
-                                  Social Media Marketing
-                                </li>
-
-                                <li onclick="openPage('branding')">
-                                  Branding
-                                </li>
-
-                            </ul>
-
+                        <li onclick="openPage('office')">
+                            Back Office Administration
                         </li>
 
-                        <li onclick="openPage('hosting')">
-                            Hosting Services
+                        <li onclick="openPage('customer')">
+                            Customer Support Service 
                         </li>
+
+                        <li onclick="openPage('inbond')">
+                            InBond & OutBond Call Center Operations
+                        </li>
+
+                        <li onclick="openPage('technical')">
+                            Technical Support
+                        </li>
+
+                        <li onclick="openPage('data')">
+                            Data processing
+                        </li>
+
+                        
+
 
                     </ul>
 
@@ -207,6 +151,11 @@
                         <li onclick="openPage('training')">
                            Training & Support
                         </li>
+
+                        <li onclick="openPage('industry')">
+                           Industries We Serve
+                        </li>
+
 
                     </ul>
 
@@ -251,7 +200,7 @@
 
                     <ul class="dropdown-content">
 
-                        <li onclick="openPage('workhome')">
+                        <li onclick="openPage('Work')">
                             work
                         </li>
 
@@ -330,7 +279,7 @@
 
                 <!--BOOK APPOINTMENT BUTTON-->
                 <div class="appointment-btn">
-                    <button onclick="openAppointmentForm()"> 
+                    <button onclick="openContact()"> 
                         BOOK APPOINTMENT
                     </button>
                 </div>
@@ -384,7 +333,7 @@
                     </div>
                     <div class="footer-bottom">
                         <p>
-                            @ 2026 Almighty Genesis. All Rights Reserved.
+                            © 2026 Almighty Genesis. All Rights Reserved.
                         </p>
                     </div>
                 </footer> 
@@ -485,7 +434,7 @@
                     <h1> OUR PROCESS </h1>
                 </div>
 
-                <div class="process-container">
+                <div class="process-stair-container">
 
                     <!--BOX1-->
                     <div class="process-box">
@@ -546,7 +495,7 @@
                     <h1> WHAT WE DO </h1>
                 </div>
 
-                <div class="what-container">
+                <div class="what-stair-container">
 
                     <!--BOX1-->
                     <div class="what-box">
@@ -592,10 +541,9 @@
             </div>
 
             <!-- MISSION BOXES -->
-
             <div class="mission-section" id="missionBoxes">
 
-                <div class="mission-container">
+                <div class="mission-infinity-container">
 
                     <!-- BOX 1 -->
 
@@ -654,21 +602,15 @@
                         <p>Innovative business ideas and smart planning for future growth.</p>
                     </div>
 
-                    <div class="flow-arrow">➥</div>
-
                     <div class="flow-box">
                         <h3>DEVELOP</h3>
                         <p>Creating powerful digital and financial solutions with technology.</p>
                     </div>
 
-                    <div class="flow-arrow">➥</div>
-
                     <div class="flow-box">
                         <h3>SUPPORT</h3>
                         <p>Providing guidance, training, and professional business support.</p>
                     </div>
-
-                    <div class="flow-arrow">➥</div>
 
                     <div class="flow-box">
                         <h3>SUCCESS</h3>
@@ -676,14 +618,10 @@
                         long-term business success.</p>
                     </div>
 
-                    <div class="flow-arrow">➥</div>
-
                     <div class="flow-box">
                         <h3> INNOVATION </h3>
                         <P> Driving smart solutions that help businesses grow and adapt to chnaging markets. </P>
                     </div>
-
-                    <div class="flow-arrow">➥</div>
 
                         <div class="flow-box">
                             <h3> FOUNDATION OF SUCCESS</h3>
@@ -714,15 +652,11 @@
                                 <p>Understand the business goals.</p>
                             </div>
 
-                            <div class="vision-arrow">➜</div>
-
                             <div class="vision-step-box">
                                 <h2>STEP 2</h2>
                                 <h3>COLLECT</h3>
                                 <p>Gather information and ideas.</p>
                             </div>
-
-                            <div class="vision-arrow">➜</div>
 
                             <div class="vision-step-box">
                                 <h2>STEP 3</h2>
@@ -730,23 +664,17 @@
                                 <p>Create smart business strategies.</p>
                             </div>
 
-                            <div class="vision-arrow">➜</div>
-
                             <div class="vision-step-box">
                                 <h2>STEP 4</h2>
                                 <h3>DEVELOP</h3>
                                 <p>Build innovative digital solutions.</p>
                             </div>
 
-                            <div class="vision-arrow">➜</div>
-
                             <div class="vision-step-box">
                                 <h2>STEP 5</h2>
                                 <h3>PRESENT</h3>
                                 <p>Deliver professional solutions.</p>
                             </div>
-
-                            <div class="vision-arrow">➜</div>
 
                             <div class="vision-step-box">
                                 <h2>STEP 6</h2>
@@ -767,7 +695,7 @@
                 <!-- HEADING -->
 
                 <div class="choose-main-heading">
-                    <h1>WHY CHOOSE US</h1>
+                    <h1>What Sets Us APart</h1>
                 </div>
 
                 <div class="choose-container">
@@ -781,13 +709,13 @@
                         <div class="choose-item">
 
                             <div class="choose-question">
-                                <h2>Industry Expert Team</h2>
+                                <h2>Experienced Professionals</h2>
                                 <span>+</span>
                             </div>
 
                             <div class="choose-answer">
                                 <p>
-                                    Our experienced professionals provide innovative and practical business solutions.
+                                    • Our skilled workforce is trained to deliver consistent, high-quality service across multiple business functions.
                                 </p>
                             </div>
 
@@ -798,13 +726,13 @@
                         <div class="choose-item">
 
                             <div class="choose-question">
-                                <h2>Smart Business Strategies</h2>
+                                <h2>Customized Solutions</h2>
                                 <span>+</span>
                             </div>
 
                             <div class="choose-answer">
                                 <p>
-                                   We create powerful strategies that help businesses grow faster and stronger.
+                                   • We understand that every business is unique. Our services are tailored to align with your goals, processes, and growth strategy.
                                 </p>
                             </div>
 
@@ -815,13 +743,13 @@
                         <div class="choose-item">
 
                             <div class="choose-question">
-                                <h2>Professional Support</h2>
+                                <h2>Cost Efficiency</h2>
                                 <span>+</span>
                             </div>
 
                             <div class="choose-answer">
                                 <p>
-                                    Dedicated support and guidance throughout your business journey.
+                                    • We help organizations optimize resources and reduce operational expenses without compromising quality.
                                 </p>
                             </div>
 
@@ -832,14 +760,14 @@
                         <div class="choose-item">
 
                             <div class="choose-question">
-                                <h2>Innovation & Technology</h2>
+                                <h2>Technology-Driven Operations</h2>
                                 <span>+</span>
                             </div>
 
                             <div class="choose-answer">
                                 <p>
-                                    We use modern technologies and innovative ideas to deliver better results.
-                                </p>
+                                  • We leverage modern tools, automation, and data-driven insights to improve performance and customer satisfaction.
+                                </p>   
                             </div>
 
                         </div>
@@ -849,16 +777,32 @@
                         <div class="choose-item">
 
                             <div class="choose-question">
-                                <h2>Long-Term Success</h2>
+                                <h2>Quality & Compliance</h2>
                                 <span>+</span>
                             </div>
 
                             <div class="choose-answer">
                                 <p>
-                                    Our focus is building sustainable growth and long-term business success.
+                                    • We maintain strict quality control standards and follow industry best practices to ensure accuracy, security, and compliance.
                                 </p>
                             </div>
 
+                        </div>
+
+                        <!-- ITEM 6 -->
+
+                        <div class="choose-item">
+
+                            <div class="choose-question">
+                                <h2>24/7 Support</h2>
+                                <span>+</span>
+                            </div>
+
+                            <div class="choose-answer">
+                                <p>
+                                    • Our global delivery capabilities allow us to provide round-the-clock support to meet the needs of businesses and their customers
+                                </p>
+                            </div>
                         </div>
 
                     </div>
@@ -866,8 +810,22 @@
                 </div>
 
             </div>
+
+            <div id="whyChooseContent" class="why-content-section">
+
+                <h2 class="why-main-heading">
+                    Our Commitment
+                </h2>
+
+                <div class="why-glass-box">
+                    <p>
+                       At ALMIGHTY GENESIS, we believe that successful outsourcing is built on trust, transparency, and measurable results. We are committed to delivering exceptional service, fostering long-term partnerships, and helping our clients stay competitive in an ever-evolving business environment.
+                    </p>
+                </div>
+            </div>
   
         </section>
+
 
         <!-- CONTACT PAGE OVERLAY -->
         <section id="contactPage" class="contact-page">
@@ -922,87 +880,43 @@
                 </div>
 
                 <div class="get-right">
-                    Reach out to us today and become part of a fast growing community of successful Business Partners. <br>
-                    If you want to see a change in your Career, contact us Immediately.
+                    Partner with us and discover how our BPO solutions can transform your business operations and accelerate growth. <br>
+                    Looking for a Change, Contact us Immediately.
                 </div>
             </div>
 
-            <div class="contact-cards">
+            <!--OUR PRESENCE-->
+            <div class="company-map-section">
 
-                <div class="contact-card" onclick="openPage('growthPage')">
-                    <h3> Start Your Growth </h3>
-                    <p> Build Your own business career and become your own boss.</p>
+                <h2>OUR PRESENCE</h2>
+                <P>Expanding opportunities across India</P>
+
+                <div id="companyMap"></div>
+
+                <!--HYDERABAD-->
+                <div class="location hyderabad">
+                    <span class="pulse"></span>
+                    <div class="tooltip">
+                        Hyderabad Office
+                    </div>
                 </div>
 
-                <div class="contact-card" onclick="openPage('opportunities')">
-                    <h3> Business Opportunities </h3>
-                    <p> Explore franchise opportunities and flexible income models.</p>
+                <!--ANDHRA PRADESH-->
+                <div class="location ap">
+                    <span class="pulse"></span>
+                    <div class="tooltip">
+                        Andhra Pradesh Office
+                    </div>
                 </div>
-
-                <div class="contact-card" onclick="openPage('industryPage')">
-                    <h3> Industries We Serve </h3>
-                    <p> IT, Healthcare, Banking, Retail and E-commerce Sectors.</p>
-                </div>
+        
             </div>
 
         </section>
 
-        <!-- APPOINTMENT PAGE -->
-
-        <div class="appointment-page" id="appointmentPage">
-
-            <div class="appointment-container">
-
-               <!-- CLOSE BUTTON -->
-
-               <span class="close-form" onclick="closeAppointmentForm()">×</span>
-
-               <h1>BOOK APPOINTMENT</h1>
-
-               <form action="https://formsubmit.co/YOURMAIL@gmail.com" method="POST">
-
-                <!-- DISABLE CAPTCHA -->
-
-                <input type="hidden" name="_captcha" value="false">
-
-                <!-- SUBJECT -->
-
-                <input type="hidden" name="_subject" value="New Appointment Booking">
-
-                <!-- NAME -->
-
-                <input type="text" name="Name" placeholder="Enter Your Name" required>
-
-                <!-- EMAIL -->
-
-                <input type="email" name="Email" placeholder="Enter Your Email" required>
-
-                <!-- PHONE -->
-
-                <input type="tel" name="Phone" placeholder="Enter Your Phone Number" required>
-
-                <!-- DATE -->
-
-                <input type="date" name="Appointment Date" required>
-
-                <!-- MESSAGE -->
-
-                <textarea name="Message" placeholder="Your Message"></textarea>
-
-                <!-- SUBMIT -->
-
-                <button type="submit">BOOK APPOINTMENT</button>
-
-                </form>
-
-            </div>
-
-        </div>
-
 
         <script src="script.js"></script>
 
-
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   
     </body> 

@@ -1,19 +1,30 @@
  function hideAll() {
 
-    function hideAll() {
-
     document.getElementById("home").classList.remove("active");
 
     document.getElementById("contentPage").classList.remove("active");
 
 }
-}
 
-/* HOME */
+
+/* SHOW SECTION */
 function showSection(id) {
-    hideAll();
+
+    /* HOME HIDE*/
+    document.getElementById("home").classList.remove("active");
+
+    /* CONTENT PAGE HIDE */
+    document.getElementById("contentPage").classList.remove("active");
+
+
+    document.getElementById("contactPage").classList.remove("active");
+
+    document.getElementById("mainHomePage").style.display = "block";
+
+    /* SHOW SELECTED PAGE */
     document.getElementById(id).classList.add("active");
 
+    /* NAVBAR SHOW */
     document.getElementById("navbar").style.display = "flex";
 
 }
@@ -21,6 +32,20 @@ function showSection(id) {
 /* OPEN PAGE */
 function openPage (type) {
 
+    const page = 
+    document.getElementById("contentPage");
+
+    page.classList.remove(
+        "overview-theme",
+        "mission-theme",
+        "vission-theme"
+    );
+
+    document.getElementById("whyChooseContent").style.display = "none";
+
+    document.getElementById("contactPage").classList.remove("active");
+
+    document.getElementById("mainHomePage").style.display = "none";
     
     /* HOME PAGE HIDE */
     document.getElementById("home").classList.remove("active");
@@ -74,148 +99,90 @@ if(type === "whychoose") {
 
     case "overview":
         title = "COMPANY OVERVIEW";
-        question = "WHO ARE WE AND WHAT DRIVES OUR INNOVATION?";
-        detailHeading = "How the company creates value...!"
-        text = "Our business model is designed to create opportunities for aspiring entrepreneurs, recent graduates, self-employed individuals, and business-minded professionals who want to build an independent career in the financial and digital service industry. Our platform encourages innovation, leadership, teamwork, and professional development while creating a strong ecosystem of financially empowered entrepreneurs and service professionals.";
+        question = "Who Are We And What Drives our Innovaton?";
+        detailHeading = "Empowering Businesses Through Exceptional Outsourcing Solutions"
+        text = "At ALMIGHTY GENESIS, we help organizations streamline operations, enhance customer experiences, and achieve sustainable growth through reliable and cost-effective Business Process Outsourcing (BPO) services. \n\nFounded with a commitment to excellence, innovation, and customer success, we partner with businesses across diverse industries to manage critical business functions while allowing them to focus on their core objectives. Our experienced professionals, advanced technology, and customer-centric approach enable us to deliver high-quality solutions tailored to each client's unique requirements.";
         bgVideo = "overview.mp4";
+        page.classList.add("overview-theme");
         break;
 
     case "mission":
         title = "OUR MISSION";
-        question = "What inspires our journey toward excellence?";
-        detailHeading = "MAKE IMPOSSIBLE, POSSIBLE...";
-        text = "Our mission is toprovide high-quality financial and digital services that support personal growth, entrepreneurship, and economic development through a powerful franchise business model and customer-centric approach. \n\nLimits exist only in the mind. What others call impossible, we call the starting point. With vision, grit, and relentless action, We turn doubt into results and barriers into breakthroughs.";
+        question = "What Inspires Our Journey Toward Excellence?";
+        detailHeading = "MAKING IMPOSSIBLE, POSSIBLE...";
+        text = "To provide innovative, scalable, and reliable outsourcing solutions that drive business success, improve operational efficiency, and create lasting value for our clients.";
         bgVideo = "mission.mp4";
+        page.classList.add("mission-theme");
         break;
 
     case "vision":
         title = "OUR VISION";
-        question = "Ready for future with us...!!!";
-        detailHeading = "BUILDING LONG-TERM SUCCESS.";
-        text = "Our vision is to be become one of the most trusted and innovative financial and digital service organisations by empowering individuals, entrepreneurs, and young professionals through accessible financial solution, franchise business opportunities, and technology-driven services accross the nation.";
+        question = "Ready For Future WithUs...!!!";
+        detailHeading = "BUILDING LONG-TERM SUCCESS...!";
+        text = "To become a trusted global outsourcing partner recognized for service excellence, technological innovation, and long-term client relationships.";
         bgVideo = "vision.mp4";
         document.getElementById("visionSection").style.display = "flex";
         document.querySelector(".vision-flow-section").style.display = "block";
-        break;
-
-    case "future":
-        title = "FUTURE GOALS";
-        question = "Where are we heading in the future?";
-        detailHeading = "EXPAND BUSINESS GROWTH AND INNOVATION...";
-        text = "Our future goals are focused on building a strong, innovative, and customer-driven company that delivers long-term value and sustainable growth. We aim to continuously evolve with changing technologies and market demands while maintaining excellence in every aspect of our business. \n\n We aim to build innovative digital experiences that combine technology, Creativity, and user-focused design. Our future goals focus on continuous growth, meaningful impact, and delivering solutions that simplify everyday experiences.";
-        bgVideo = "future.mp4";
-        break;
-
-    case "values":
-        title = "OUR VALUES";
-        question = "What are the principals behind our success?";
-        text = "Our values define who we are and guide everything we do. They help us build strong relationships, maitain trust, and achieve success together. We believe in honesty, responsibility, teamwork, and continous improvement in every aspect of our work.";
-        bgVideo = "values.mp4";
+        page.classList.add("vission-theme");
         break;
 
     case "why":
         title = "WHY CHOOSE US";
-        question = "Why do businesses trust Almighty Genesis?";
-        detailHeading = "START YOUR BUSINESS DREAM WITH US..."
-        text = "If you are thinking to start a new business or if you want to start a new career. \n\nOur Company is commited to delivering innovative business solutions that help organizations grow, complete, and succeed in the modern digital market. We combine technology, strategy, and customer-focused services to create long-term value for our clients. \n\nWe understand the challanges businesses face in today's competitive environment. Our experienced team provides strategic solutions that improve efficiency, productivity, and overall business performance. "
+        question = "Why DO Businesses Trust Almighty Genesis?";
+        detailHeading = "Who We Are";
+        text = "We are a team of dedicated outsourcing specialists providing end-to-end business support services to companies worldwide. From customer support and technical assistance to back-office operations and data management, we serve as an extension of our clients' teams, ensuring efficiency, accuracy, and exceptional service delivery. \n\n Our goal is simple: to help businesses reduce operational costs, improve productivity, and deliver superior customer experiences.";
+
         bgVideo = "why.mp4";
         document.getElementById("whyChooseSection").style.display = "block";
+        document.getElementById("whyChooseContent").style.display = "block";
+        page.classList.add("why-theme");
         break;
+
 
     /* SERVICES */
-
-    case "Front-End":
-        title = "FRONTEND DEVELOPMENT";
-        question = "Need attractive and interactive websites?";
-        text = "We create visually stunning, responsive, and user-friendly frontend interfaces using modern technologies.";
-        bgVideo = "frontend.mp4";
+    case "lead":
+        title = "LEAD GENERATION AND SALES SUPPORT";
+        text = "work remotely with flexible timings and professional growth opportunities.";
+        bgVideo = "LG-2.mp4";
         break;
-
-        case "Back-End":
-        title = "BACKEND DEVELOPMENT";
-        question = "Looking for secure and scalable systems?";
-        text = "We develop powerful bakend systems, APIs, databases, and server-side architectures.";
-        bgVideo = "backend.mp4";
-        break;
-
-    case "fullstack":
-        title = "FULL STACK DEVELOPMENT";
-        question = "Want complete end-to-end web solutions?";
-        text = "Our fullstack development services combine frontend and backend technologies for complete web platforms. \n\n Full stack development is the process of building both the frontend and backend of a web application. A full stack developer works on everything from designing user interfaces to managing servers, databases, and application logic.";
-        bgVideo = "fullstack.mp4";
-        break;
-
-    case "database":
-        title = "DATA BASE";
-        question = "Why do businesses use databases...?";
-        text = "A database plays an important role in modern business organizations. It helps companies store, organize, and manage large amounts of information efficiently. Businesses use databases to maintain customer records, employee details, sales reports, inventory data, and financial transactions. With a database system, information can be accessed quickly, updated easily, and shared securely among departments.";
-        bgVideo = "data.mp4";
-        break;   
-
-    case "ecommerce":
-        title = "E-COMMERCE WEBSITE";
-        question = "Ready to launch your online business?";
-        text = "We build professional ecommerce websites with payment integration, product management, and advances UI";
-        bgVideo = "ecommerce.mp4";
-        break;
-
-    case "erp":
-        title = "ERP SOLUTIONS";
-        question = "Need smart business management systems?";
-        detailHeading = "Erp Solutions";
-        text = "Our ERP systems streamline operations, automate workflows, and improve productivity. \n\n Enterprise Resource Planning (ERP) solutions are integrated software systems designed to manage and automate core business operations within an organization. They help businesses streamline processes by connecting departments such as finance, human resources, inventory, sales, procurement, and customer management into a single centralized platform.";
-        bgVideo = "erp.mp4";
-        break;
-
-    case "crm":
-
-        title = "CRM SOFTWARE";
-        title = "CRM SOFTWARE";
-        question = "Want Stronger Customer relationships?";
-        text = "Our CRM Software helps businesses manage Customers, sales, leads, and communication effectively. \n\n Customer Relationship Management (CRM) solutions are software platforms designed to help businesses manage customer interactions, sales activities, marketing campaigns, and customer support services in a centralized system.";
-        bgVideo = "crm.mp4";
-        break;
-
-    case "ai":
-
-        title = "AI SOLUTIONS";
-        question = "Ready to integrate artificial intelligence?";
-        text = "We develop AI-Powered systems for automation, analytics, and intelligent business solutions. \n\n AI solutions enable businesses to automate repetitive tasks and improve productivity across different departments. Organizations can use AI-powered tools to enhance customer service, optimize workflows, and support innovation in rapidly changing markets.";
-        bgVideo = "ai.mp4";
-        break;
-
-    case "seo":
-
-        title = "SEO SERVICES";
-        question = "Want your website improve visibility, traffic, and online presence for businesses.";
-        text = "We provide the services.";
-        bgVideo = "seo.mp4";
-        break;
-
-    case "social":
-
-        title = "SOCIAL MEDIA MARKETING";
-        question = "looking to grow your digital audience?";
-        text = "We create strategic social media campaigns to increase brand engagement and reach.";
-        bgVideo = "social.mp4";
-        break;
-
-    case "branding":
-
-            title = "BRANDING";
-            question = "Need a strong brand identuty?";
-            text = "We help businesses create professional branding stratagies, logos, and marketing identities.";
-            bgVideo = "branding.mp4";
-            break;
-
-    case "hosting":
-
-           title = "HOSTING SERVICES";
-           question = "Need fast and secure hosting?";
-           text = "We provide scalable, reliable, and high-performance hosting solutions.";
-           bgVideo = "hosting.mp4";
-           break;
         
+    case "hr":
+        title = "HR & RECRUITMENT PROCESS OUTSOURCING";
+        text = "work remotely with flexible timings and professional growth opportunities.";
+        bgVideo = "hrteam.mp4";
+        break;
+        
+    case "office":
+        title = "BACK OFFICE ADMINISTRATION";
+        text = "work remotely with flexible timings and professional growth opportunities. Improve your skills and build your future from home.";
+        bgVideo = "administrate.mp4";
+        break; 
+        
+    case "customer":
+        title = "CUSTOMER SUPPORT SERVICE";
+        text = "work remotely with flexible timings and professional growth opportunities.";
+        bgVideo = "customer.mp4";
+        break;
+        
+    case "inbond":
+        title = "INBOND & OUTBOND CALL CENTER OPERATIONS";
+        text = "Work remotely with flexible timings and professional growth opportunities";
+        bgVideo = "call.mp4";
+        break;
+        
+    case "technical":
+        title: "TECHNICAL SUPPORT";
+        text = "Work remotely with flexible timings and professional growth opportunities. Improve your skills and build your future from home.";
+        bgVideo = "technical.mp4";
+        break;
+    
+    case "data":
+        title = "Data Processing";
+        text = "Work remotely with flexible timingd and professional growth opportunities. Improve your skills and build your future from home.";
+        bgVideo = "processing.mp4";
+        break;
+        
+    /* BUSINESS MODEL */
     case "startup":
         title = "STARTUP PARTNERSHIP";
         text = "A franchise business offers many advantage to entrepreneurs who want to start a business with lower risk.";
@@ -234,21 +201,26 @@ if(type === "whychoose") {
         bgVideo = "revenue.mp4";
         break;  
         
-       
-        
     case "training":
         title = "TRAINING & SUPPORT";
         text = "A Franchise business offers many advantage to entrepreneurs who want to start a business with lower risk.";
         bgVideo = "training.mp4";
-        break;  
+        break;
         
+    case "industry":
+        tile = "INDUSTRIES WE SERVE";
+        text = "Work remotely with flexible timings and professional growth opportunities. Improve your skills and build your future from home.";
+        bgVideo = "industry.mp4";
+        break;
+            
+    /* BUSINESS OPPORTUNITIES */    
     case "work":
         title = "WORK WITH US";
         text = "A franchise business offers many advantages to entrepreneurs who want to start a business with lower risk.";
         bgVideo = "work.mp4";
         break; 
 
-        case "start-up":
+    case "start-up":
         title = "STARTUP COLLABORATION"; 
         text = "A franchise business offers many advantage to entrepreneurs who want to start a business with lower risk.";
         bgVideo = "collaboration.mp4";
@@ -264,22 +236,22 @@ if(type === "whychoose") {
         title = "ENTREPRENEURSHIP PROGRAM";
         text = "A Franchise business offers many advantages to entrepreneurs who want to start a business with lower risk";
         bgVideo = "program.mp4";
-        break; 
+        break;
 
-    case "wfh":
-        title = "WORK FROM HOME";
-        text = "A franchise business offers many advantages to entrepreneurs who want to start a business with lower risk";
-        bgVideo = "workfromhome.mp4";
-        break;  
-
-    case "office":
-        title = "WORK IN OFFICE";
-        text = "A franchise business offers many advantages to entrepreneurs who want to start a business with lower risk";
+    /* CAREERS */
+    case "Work":
+        title = "WORK";
+        text = "A Franchise business offers many advantages to entrepreneurs who want to start a business with lower risk";
         bgVideo = "office.mp4";
+        break;
+
+    case "internship":
+        title = "INTERNSHIP PROGRAM";
+        text = "A Franchise business offers many advantages to enterpreneurs who want to start a business with lower risk";
+        bgVideo = "internship.mp4";
         break;    
-        
-        
-    } 
+    
+    }          
 
     document.getElementById("pageTitle").innerText = title;
     document.getElementById("pageQuestion").innerText = question;
@@ -312,7 +284,7 @@ if(type === "overview") {
 
 /* SHOW ONLY FOR MISSION PAGE */
 
-if(type === "misssion") {
+if(type === "mission") {
 
     document.getElementById("missionBoxes").style.display = "block";
 
@@ -350,7 +322,7 @@ if(type === "why") {
 
 }
 
-   /* WHY CHOOSE US ACCORDION */
+/* WHY CHOOSE US ACCORDION */
 
 const chooseItems = document.querySelectorAll(".choose-item");
 
@@ -360,10 +332,120 @@ chooseItems.forEach(item => {
 
     question.addEventListener("click", () => {
 
+        chooseItems.forEach(otherItem => {
+            if(otherItem !== item) {
+
+                otherItem.classList.remove("active");
+            }
+        });
+
         item.classList.toggle("active");
 
     });
 
 });
 
+/* SCROLL ANIMATION */
+
+const scrollElements = document.querySelectorAll(
+".scroll-box, .scroll-img, .footer"
+);
+
+function scrollAnimation() {
+
+    scrollElements.forEach((el) => {
+
+        const elementTop = el.getBoundingClientRect().top;
+
+        const screenHeight = window.innerHeight;
+
+        if(elementTop < screenHeight - 100){
+
+            el.classList.add("show");
+
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", scrollAnimation);
+
+scrollAnimation();
+
+function openContact() {
+
+    /* HOME HIDE */
+    document.getElementById("mainHomePage").style.display = "none";
+
+    /* CONTENT PAGE HIDE */
+    document.getElementById("contentPage").classList.remove("active");
+
+    /* CONTACT SHOW */
+    document.getElementById("contactPage").classList.add("active");
+
+    setTimeout(() => {
+        initCompanyMap();
+    }, 300);
+
+    /* NAVBAR */
+    document.getElementById("navbar").style.display = "flex";
+
+    window.scrollTo(0,0);
+}
+
+function initCompanyMap() {
+
+   const mapContainer = 
+   document.getElementById("companyMap");
+      
+   if(mapContainer._leaflet_id){
+    return;
+   }
+
+    const map = L.map('companyMap', {
+        zoomControl: true
+    }).setView([16.5, 80.6], 6);
+
+    map.attributionControl.remove();
+
+    /* DARK MAP */
+    L.tileLayer(
+    'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+    {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    /* HYDERABAD */
+    const hyderabad = L.marker([17.3850, 78.4867]).addTo(map);
+
+    hyderabad.bindPopup(
+        "<b>Hyderabad Office</b><br>Telangana"
+    );
+
+    /* ANDHRA PRADESH */
+    const ap =  L.marker([16.9891,82.2475]).addTo(map);
+
+    ap.bindPopup(
+        "<b>Andhra Pradesh Office</b><br>Kakinada"
+    );
+
+    /* AUTO ZOOM ON CLICK */
+    hyderabad.on("click", function() {
+        map.setView([17.2850, 78.4867], 12);
+    });
+
+    ap.on("click", function() {
+        map.setView([16.9891, 82.2475], 12);
+    });
+
+    if(type === "why") {
+        document.getElementById("whyChooseContent").style.display = "block";
+    }else {
+
+        document.getElementById("whyChooseContent").style.display = "none";
+    }
+
+    
+}
 
